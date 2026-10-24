@@ -7,8 +7,9 @@ import { ArrowLeft, Loader2 } from "lucide-react";
 
 export function AdminLoginForm() {
   const router = useRouter();
-  const [email, setEmail] = useState("admin@iykomotech.com");
-  const [password, setPassword] = useState("IykomoAdmin2026!");
+  // Set initial state values to empty strings
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -86,6 +87,7 @@ export function AdminLoginForm() {
                 id="admin-email"
                 type="email"
                 required
+                placeholder="admin@iykomotech.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 focus:border-blue-600 focus:outline-hidden"
@@ -103,6 +105,7 @@ export function AdminLoginForm() {
                 id="admin-password"
                 type="password"
                 required
+                placeholder="••••••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="mt-1.5 w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-slate-900 focus:border-blue-600 focus:outline-hidden"
