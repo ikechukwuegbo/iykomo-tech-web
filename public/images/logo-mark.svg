@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="IYKOMO-TECH COMMUNICATION logo mark">
+  <defs>
+    <linearGradient id="iykSphere" x1="12%" y1="4%" x2="88%" y2="96%">
+      <stop offset="0%" stop-color="#45BCF7"/>
+      <stop offset="38%" stop-color="#1E86DC"/>
+      <stop offset="72%" stop-color="#1259A8"/>
+      <stop offset="100%" stop-color="#0B2D66"/>
+    </linearGradient>
+    <linearGradient id="iykSheen" x1="20%" y1="0%" x2="60%" y2="70%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="100" cy="100" r="97" fill="url(#iykSphere)"/>
+  <path d="M100 3 A97 97 0 0 0 3 100 A97 97 0 0 0 100 3 Z" fill="url(#iykSheen)"/>
+
+  <!-- Upper angular circuit trace with terminal node -->
+  <path d="M9 72 H50 L69 51 H121" fill="none" stroke="#FFFFFF" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="121" cy="51" r="11.5" fill="none" stroke="#FFFFFF" stroke-width="7"/>
+
+  <!-- Second circuit trace with inline node -->
+  <path d="M34 103 H158" fill="none" stroke="#FFFFFF" stroke-width="9.5" stroke-linecap="round"/>
+  <circle cx="64" cy="103" r="10" fill="none" stroke="#FFFFFF" stroke-width="6.5"/>
+
+  <!-- Third circuit trace with inline node -->
+  <path d="M44 136 H150" fill="none" stroke="#FFFFFF" stroke-width="9.5" stroke-linecap="round"/>
+  <circle cx="112" cy="136" r="10" fill="none" stroke="#FFFFFF" stroke-width="6.5"/>
+
+  <!-- Lower stepped circuit trace -->
+  <path d="M54 166 H120 L137 183" fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="66" cy="166" r="8.5" fill="none" stroke="#FFFFFF" stroke-width="6"/>
+
+  <!-- Connector dots -->
+  <circle cx="26" cy="140" r="5.5" fill="#FFFFFF"/>
+  <circle cx="160" cy="118" r="5.5" fill="#FFFFFF"/>
+  <circle cx="96" cy="98" r="4" fill="#FFFFFF"/>
+</svg>
