@@ -1,8 +1,18 @@
-import { drizzle } from "drizzle-orm/better-sqlite3";
-import Database from "better-sqlite3";
-import * as schema from "./schema";
+import { drizzle } from 'drizzle-orm/node-postgres';
+import { Pool } from 'pg';
+import * as schema from './schema';
 
-const sqlite = new Database("dev.db");
+const connectionString = process.env.DATABASE_URL;
 
-export const db = drizzle(sqlite, { schema });
-export { schema };
+if (!connectionString) {
+  throw new Error('DATABASE_URL environment variable is missing');
+}
+
+const pool = new Pool({
+  connectionString,
+  ssl: {
+    rejectUnauthorized: false,
+  },
+});
+
+export const db = drizzle(pool, { schema });
