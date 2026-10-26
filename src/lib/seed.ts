@@ -493,8 +493,6 @@ async function runSeed(): Promise<void> {
   }
 
   // Real, verifiable industry certifications (Cisco Networking Academy + ITIL).
-  // Seeded whenever the table is empty so a fresh deployment shows genuine
-  // credentials rather than placeholder text.
   const existingCerts = await db
     .select({ value: count() })
     .from(certifications);
@@ -505,7 +503,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-04-07",
         credentialId: "CCNA-ITN-2025",
-        certificateFile: "/certificates/CCNA-Introduction-to-Networks.pdf",
+        certificateFile: "/certificates/CCNAITNUpdated20250407-27-lghnu4.pdf",
         skillsCovered: [
           "Network Fundamentals",
           "Network Access",
@@ -521,7 +519,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-22",
         credentialId: "CISCO-EH-2025",
-        certificateFile: "/certificates/Ethical-Hacker.pdf",
+        certificateFile: "/certificates/EthicalHackerUpdate20250122-28-ggf99h.pdf",
         skillsCovered: [
           "Ethical Hacking Methodology",
           "Vulnerability Assessment",
@@ -536,7 +534,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-22",
         credentialId: "CISCO-EPS-2025",
-        certificateFile: "/certificates/Endpoint-Security.pdf",
+        certificateFile: "/certificates/EndpointSecurityUpdate20250122-27-pyha1a.pdf",
         skillsCovered: [
           "Endpoint Protection Platforms",
           "Antimalware & EDR",
@@ -551,7 +549,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-NSS-2025",
-        certificateFile: "/certificates/Network-Support-and-Security.pdf",
+        certificateFile: "/certificates/Network_Support_and_Security_Badge20250116-27-3n175o.pdf",
         skillsCovered: [
           "Network Troubleshooting",
           "Helpdesk & Customer Support",
@@ -566,7 +564,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-NTCP-2025",
-        certificateFile: "/certificates/Network-Technician-Career-Path.pdf",
+        certificateFile: "/certificates/Network_Technician_Career_Path_Badge20250112-26-vokfi0.pdf",
         skillsCovered: [
           "Network Installation",
           "Device Configuration",
@@ -581,8 +579,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-NDIC-2025",
-        certificateFile:
-          "/certificates/Networking-Devices-and-Initial-Configuration.pdf",
+        certificateFile: "/certificates/Networking_Devices_and_Initial_Configuration_Badge20250116-27-abic46.pdf",
         skillsCovered: [
           "Router & Switch Configuration",
           "Cisco IOS CLI",
@@ -597,7 +594,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-NB-2025",
-        certificateFile: "/certificates/Networking-Basics.pdf",
+        certificateFile: "/certificates/Networking_Basics_Badge20250112-26-plir6h.pdf",
         skillsCovered: [
           "OSI & TCP/IP Models",
           "IP Addressing & Subnetting",
@@ -612,7 +609,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-12",
         credentialId: "CISCO-ICS-2025",
-        certificateFile: "/certificates/Introduction-to-Cybersecurity.pdf",
+        certificateFile: "/certificates/Introduction_to_Cybersecurity_certificate_frankegbo12-gmail-com_b729973d-51b8-4616-985b-3d349b289c8a.pdf",
         skillsCovered: [
           "Cybersecurity Fundamentals",
           "Threat Landscape",
@@ -627,7 +624,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-CHB-2025",
-        certificateFile: "/certificates/Computer-Hardware-Basics.pdf",
+        certificateFile: "/certificates/Computer_Hardware_Basics_Badge20250116-27-axp0zj.pdf",
         skillsCovered: [
           "PC Assembly & Components",
           "Motherboards & CPUs",
@@ -642,7 +639,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-OSB-2025",
-        certificateFile: "/certificates/Operating-Systems-Basics.pdf",
+        certificateFile: "/certificates/Operating_Systems_Basics_Badge20250116-27-pzv43n.pdf",
         skillsCovered: [
           "Windows Administration",
           "Linux Fundamentals",
@@ -657,7 +654,7 @@ async function runSeed(): Promise<void> {
         issuer: "AXELOS / PeopleCert",
         issueDate: "2025",
         credentialId: "ITIL4-F-2025",
-        certificateFile: "/certificates/ITIL-4-Foundation.pdf",
+        certificateFile: "/certificates/Alison_Advanced_Certificate-7588-27443858 (1).pdf",
         skillsCovered: [
           "ITIL Service Value System",
           "Incident Management",
@@ -696,7 +693,7 @@ async function runSeed(): Promise<void> {
           slug: "office-network-vlan-segmentation-cctv-printers",
           excerpt:
             "Why flat office networks create security risks and broadcast storms—and how cleanly segmented VLANs transform stability and security.",
-          content: `In many small and mid-sized organizations, staff laptops, guest smartphones, multifunction printers, and IP security cameras all share a single flat ` + "`192.168.1.0/24`" + ` subnet. As soon as device count grows, intermittent dropouts and security exposure follow.\n\n### Recommended 4-Zone Office Topology\n- **VLAN 10 (Corporate Staff):** Workstations with authenticated access to internal file/print servers.\n- **VLAN 20 (Infrastructure & Printers):** Static IPs for MFPs, NAS storage, and domain services with controlled firewall rules.\n- **VLAN 30 (IP CCTV Surveillance):** PoE cameras talking strictly to the NVR appliance—zero unauthorized internet exposure.\n- **VLAN 40 (Guest Wi-Fi):** Client-isolated internet access with bandwidth fairness enabled.\n\nCombining clean physical patch panel labeling with disciplined VLAN routing cuts troubleshooting time by over 70%.`,
+          content: `In many small and mid-sized organizations, staff laptops, guest smartphones, multifunction printers, and IP security cameras all share a single flat 192.168.1.0/24 subnet. As soon as device count grows, intermittent dropouts and security exposure follow.\n\n### Recommended 4-Zone Office Topology\n- **VLAN 10 (Corporate Staff):** Workstations with authenticated access to internal file/print servers.\n- **VLAN 20 (Infrastructure & Printers):** Static IPs for MFPs, NAS storage, and domain services with controlled firewall rules.\n- **VLAN 30 (IP CCTV Surveillance):** PoE cameras talking strictly to the NVR appliance—zero unauthorized internet exposure.\n- **VLAN 40 (Guest Wi-Fi):** Client-isolated internet access with bandwidth fairness enabled.\n\nCombining clean physical patch panel labeling with disciplined VLAN routing cuts troubleshooting time by over 70%.`,
           category: "IT Troubleshooting & Networking",
           tags: ["Networking", "VLAN", "IP CCTV", "Printers", "Security"],
           coverImage: "/images/service-infrastructure.jpg",
@@ -704,220 +701,7 @@ async function runSeed(): Promise<void> {
           status: "published",
           authorName: "Ikechukwu Egbo",
         },
-        {
-          title:
-            "Solving Stubborn Enterprise Network Printer & Scan-to-Email Failures Permanently",
-          slug: "solving-enterprise-network-printer-scan-failures",
-          excerpt:
-            "A systematic checklist for eliminating offline print queues, DHCP IP drift, and modern TLS authentication errors on office MFPs.",
-          content: `Few issues frustrate an office faster than a jammed print queue five minutes before a client meeting. Over 85% of recurring printer tickets trace back to three root causes: DHCP lease drift, WSD port instability, and legacy SMTP authentication.\n\n### The Permanent Fix Checklist\n1. **Reserve or Assign Static IPs Outside the DHCP Pool:** Bind the printer MAC address on the router/DHCP server AND document the IP right on the asset tag.\n2. **Use Standard TCP/IP Ports Instead of WSD:** Windows Web Services for Devices frequently loses state across subnet renewals; explicit Standard TCP/IP ports stay rock-solid.\n3. **Modern App Passwords & TLS 1.2+ for Scan-to-Email:** Configure dedicated authenticated relay credentials with SPF alignment so scanned PDFs never land in spam.`,
-          category: "IT Troubleshooting & Networking",
-          tags: ["IT Support", "Printer Support", "Troubleshooting", "M365"],
-          coverImage: "/images/project-portfolio-infra.jpg",
-          readingTime: "4 min read",
-          status: "published",
-          authorName: "Ikechukwu Egbo",
-        },
       ])
       .onConflictDoNothing();
-  }
-
-  const existingMedia = await db.select({ value: count() }).from(mediaAssets);
-  if ((existingMedia[0]?.value ?? 0) === 0) {
-    await db.insert(mediaAssets).values([
-      {
-        fileName: "logo-mark.svg",
-        fileUrl: "/images/logo-mark.svg",
-        mimeType: "image/svg+xml",
-        fileSize: 1998,
-        category: "general",
-        altText: "IYKOMO-TECH COMMUNICATION circuit sphere logo mark",
-      },
-      {
-        fileName: "logo-iykomo-tech.svg",
-        fileUrl: "/images/logo-iykomo-tech.svg",
-        mimeType: "image/svg+xml",
-        fileSize: 3400,
-        category: "general",
-        altText: "IYKOMO-TECH COMMUNICATION official company logo",
-      },
-      {
-        fileName: "logo-mark.svg",
-        fileUrl: "/images/logo-mark.svg",
-        mimeType: "image/svg+xml",
-        fileSize: 2100,
-        category: "general",
-        altText: "IYKOMO-TECH COMMUNICATION circuit sphere logo mark",
-      },
-      {
-        fileName: "logo-iykbook.png",
-        fileUrl: "/images/logo-iykbook.png",
-        mimeType: "image/png",
-        fileSize: 88000,
-        category: "project",
-        altText: "iykbook project logo mark",
-      },
-      {
-        fileName: "logo-iykschool.png",
-        fileUrl: "/images/logo-iykschool.png",
-        mimeType: "image/png",
-        fileSize: 92000,
-        category: "project",
-        altText: "iykschool project logo mark",
-      },
-      {
-        fileName: "iykbook-flyer.jpg",
-        fileUrl: "/images/iykbook-flyer.jpg",
-        mimeType: "image/jpeg",
-        fileSize: 412000,
-        category: "project",
-        altText:
-          "iykbook All-in-One Business Management Software marketing flyer",
-      },
-      {
-        fileName: "iykschool-brandboard.jpg",
-        fileUrl: "/images/iykschool-brandboard.jpg",
-        mimeType: "image/jpeg",
-        fileSize: 398000,
-        category: "project",
-        altText: "iykschool Complete Education Management Platform brand board",
-      },
-      {
-        fileName: "project-iykbook.jpg",
-        fileUrl: "/images/project-iykbook.jpg",
-        mimeType: "image/jpeg",
-        fileSize: 312000,
-        category: "project",
-        altText: "iykbook SaaS Accounting Application Showcase",
-      },
-      {
-        fileName: "project-iykschool.jpg",
-        fileUrl: "/images/project-iykschool.jpg",
-        mimeType: "image/jpeg",
-        fileSize: 298000,
-        category: "project",
-        altText: "iykschool School Management Portal Showcase",
-      },
-      {
-        fileName: "project-portfolio-infra.jpg",
-        fileUrl: "/images/project-portfolio-infra.jpg",
-        mimeType: "image/jpeg",
-        fileSize: 276000,
-        category: "project",
-        altText: "Full-Stack CI/CD & Cloud Engineering Workspace",
-      },
-      {
-        fileName: "service-infrastructure.jpg",
-        fileUrl: "/images/service-infrastructure.jpg",
-        mimeType: "image/jpeg",
-        fileSize: 334000,
-        category: "certificate",
-        altText: "Enterprise Server Rack & Structured Cabling Infrastructure",
-      },
-    ]);
-  }
-
-  const existingMessages = await db
-    .select({ value: count() })
-    .from(contactMessages);
-  if ((existingMessages[0]?.value ?? 0) === 0) {
-    await db.insert(contactMessages).values([
-      {
-        name: "Dr. Amara Nwosu",
-        email: "director@crestviewacademy.edu",
-        phone: "+234 803 555 0192",
-        company: "Crestview International Academy",
-        serviceInterest: "iykschool Onboarding & Campus Wi-Fi",
-        subject: "Deploying iykschool Portal + Computer Lab Network Upgrade",
-        message:
-          "Hello Iyke, we reviewed iykschool.iykomotech.com and would love to schedule a demo for 450 students alongside upgrading our administrative block network switches.",
-        status: "unread",
-      },
-      {
-        name: "David Mensah",
-        email: "d.mensah@meridianlogistics.co",
-        phone: "+44 7700 900412",
-        company: "Meridian Freight & Supply",
-        serviceInterest: "Custom Full-Stack Software & Web Applications",
-        subject: "Full-Stack Operations Dashboard & IT Retainer Inquiry",
-        message:
-          "Impressive work on iykbook! Our team is looking for a full-stack Next.js engineer and IT infrastructure partner to modernize our dispatch portal.",
-        status: "read",
-      },
-    ]);
-  }
-
-  const existingSettings = await db
-    .select({ value: count() })
-    .from(siteSettings);
-  if ((existingSettings[0]?.value ?? 0) === 0) {
-    await db
-      .insert(siteSettings)
-      .values([
-        {
-          key: "general",
-          value: {
-            brandName: "Ikechukwu Egbo | IYKOMO-TECH COMMUNICATION",
-            shortBrand: "IYKOMO-TECH COMMUNICATION",
-            founderName: "Ikechukwu Egbo (Iyke)",
-            headline:
-              "Building Resilient Software Products & Enterprise IT Infrastructure.",
-            subheadline:
-              "Personal portfolio of Ikechukwu Egbo & official technology hub of IYKOMO-TECH COMMUNICATION — creators of iykbook (accounting, inventory & business management) and iykschool (complete education management), plus enterprise IT support, networking, CCTV, and cloud systems administration.",
-            heroBadge: "Available for Software Engineering Roles, Contracts & IT Projects",
-            aboutSummary:
-              "I am Ikechukwu Egbo (Iyke), a Full-Stack Software Developer and Enterprise IT Infrastructure Specialist leading IYKOMO-TECH COMMUNICATION. My work bridges modern web engineering—architecting production SaaS applications like iykbook and iykschool with Next.js, TypeScript, and PostgreSQL—with hands-on IT systems engineering across networking, server administration, IP surveillance, and enterprise user support.",
-            mission:
-              "Empowering businesses, schools, and teams with dependable software tools and zero-headache technology infrastructure.",
-            email: "support@iykomotech.com",
-            supportEmail: "support@iykomotech.com",
-            salesEmail: "sales@iykomotech.com",
-            phone: "+234 (0) 800-IYKOMO-TECH",
-            location: "Global Remote & On-Site IT Operations",
-            logoUrl: "/images/logo-iykomo-tech.svg",
-            logoMarkUrl: "/images/logo-mark.svg",
-            portraitUrl: "",
-            githubUrl: "https://github.com/ikechukwuegbo/ikechukwuegbo.github.io",
-            linkedinUrl: "https://www.linkedin.com/in/ikechukwu-egbo",
-            iykbookUrl: "https://iykbook.iykomotech.com",
-            iykschoolUrl: "https://iykschool.iykomotech.com",
-            seoTitle:
-              "Ikechukwu Egbo | IYKOMO-TECH COMMUNICATION — Full-Stack Developer & IT Infrastructure Specialist",
-            seoDescription:
-              "Official portfolio and technology platform of Ikechukwu Egbo (IYKOMO-TECH COMMUNICATION). Explore iykbook, iykschool, IT infrastructure case studies, services, technical blog, and enterprise IT solutions.",
-          },
-        },
-      ])
-      .onConflictDoNothing();
-  }
-
-  const existingLogs = await db.select({ value: count() }).from(activityLogs);
-  if ((existingLogs[0]?.value ?? 0) === 0) {
-    await db.insert(activityLogs).values([
-      {
-        actorName: "Ikechukwu Egbo",
-        actorEmail: "admin@iykomotech.com",
-        action: "PUBLISHED",
-        entityType: "Project",
-        entityTitle: "iykbook — Cloud Accounting & Business Operations Suite",
-        details: "Verified live URL https://iykbook.iykomotech.com and featured badge",
-      },
-      {
-        actorName: "Ikechukwu Egbo",
-        actorEmail: "admin@iykomotech.com",
-        action: "PUBLISHED",
-        entityType: "Project",
-        entityTitle: "iykschool — Unified School Administration & Academic Portal",
-        details: "Verified live URL https://iykschool.iykomotech.com and portfolio order",
-      },
-      {
-        actorName: "Ikechukwu Egbo",
-        actorEmail: "admin@iykomotech.com",
-        action: "CONFIGURED",
-        entityType: "SiteSettings",
-        entityTitle: "Ikechukwu Egbo | IYKOMO-TECH Global Settings",
-        details: "Initialized production brand identity, SEO metadata, and security policies",
-      },
-    ]);
   }
 }
