@@ -492,7 +492,8 @@ async function runSeed(): Promise<void> {
     ]);
   }
 
-  // Real, verifiable industry certifications (Cisco Networking Academy + ITIL).
+  // Real, verifiable industry certifications (Cisco Networking Academy + ITIL)
+  // mapped exactly to your updated filenames in public/certificates/
   const existingCerts = await db
     .select({ value: count() })
     .from(certifications);
@@ -503,7 +504,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-04-07",
         credentialId: "CCNA-ITN-2025",
-        certificateFile: "/certificates/CCNAITNUpdated20250407-27-lghnu4.pdf",
+        certificateFile: "/certificates/CCNA-Introduction-to-Networks.pdf",
         skillsCovered: [
           "Network Fundamentals",
           "Network Access",
@@ -519,7 +520,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-22",
         credentialId: "CISCO-EH-2025",
-        certificateFile: "/certificates/EthicalHackerUpdate20250122-28-ggf99h.pdf",
+        certificateFile: "/certificates/Ethical-Hacker.pdf",
         skillsCovered: [
           "Ethical Hacking Methodology",
           "Vulnerability Assessment",
@@ -534,7 +535,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-22",
         credentialId: "CISCO-EPS-2025",
-        certificateFile: "/certificates/EndpointSecurityUpdate20250122-27-pyha1a.pdf",
+        certificateFile: "/certificates/Endpoint-Security.pdf",
         skillsCovered: [
           "Endpoint Protection Platforms",
           "Antimalware & EDR",
@@ -549,7 +550,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-NSS-2025",
-        certificateFile: "/certificates/Network_Support_and_Security_Badge20250116-27-3n175o.pdf",
+        certificateFile: "/certificates/Network-Support-and-Security.pdf",
         skillsCovered: [
           "Network Troubleshooting",
           "Helpdesk & Customer Support",
@@ -564,7 +565,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-NTCP-2025",
-        certificateFile: "/certificates/Network_Technician_Career_Path_Badge20250112-26-vokfi0.pdf",
+        certificateFile: "/certificates/Network-Technician-Career-Path.pdf",
         skillsCovered: [
           "Network Installation",
           "Device Configuration",
@@ -579,7 +580,8 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-NDIC-2025",
-        certificateFile: "/certificates/Networking_Devices_and_Initial_Configuration_Badge20250116-27-abic46.pdf",
+        certificateFile:
+          "/certificates/Networking-Devices-and-Initial-Configuration.pdf",
         skillsCovered: [
           "Router & Switch Configuration",
           "Cisco IOS CLI",
@@ -594,7 +596,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-NB-2025",
-        certificateFile: "/certificates/Networking_Basics_Badge20250112-26-plir6h.pdf",
+        certificateFile: "/certificates/Networking-Basics.pdf",
         skillsCovered: [
           "OSI & TCP/IP Models",
           "IP Addressing & Subnetting",
@@ -609,7 +611,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-12",
         credentialId: "CISCO-ICS-2025",
-        certificateFile: "/certificates/Introduction_to_Cybersecurity_certificate_frankegbo12-gmail-com_b729973d-51b8-4616-985b-3d349b289c8a.pdf",
+        certificateFile: "/certificates/Introduction-to-Cybersecurity.pdf",
         skillsCovered: [
           "Cybersecurity Fundamentals",
           "Threat Landscape",
@@ -624,7 +626,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-CHB-2025",
-        certificateFile: "/certificates/Computer_Hardware_Basics_Badge20250116-27-axp0zj.pdf",
+        certificateFile: "/certificates/Computer-Hardware-Basics.pdf",
         skillsCovered: [
           "PC Assembly & Components",
           "Motherboards & CPUs",
@@ -639,7 +641,7 @@ async function runSeed(): Promise<void> {
         issuer: "Cisco Networking Academy",
         issueDate: "2025-01-16",
         credentialId: "CISCO-OSB-2025",
-        certificateFile: "/certificates/Operating_Systems_Basics_Badge20250116-27-pzv43n.pdf",
+        certificateFile: "/certificates/Operating-Systems-Basics.pdf",
         skillsCovered: [
           "Windows Administration",
           "Linux Fundamentals",
@@ -654,7 +656,7 @@ async function runSeed(): Promise<void> {
         issuer: "AXELOS / PeopleCert",
         issueDate: "2025",
         credentialId: "ITIL4-F-2025",
-        certificateFile: "/certificates/Alison_Advanced_Certificate-7588-27443858 (1).pdf",
+        certificateFile: "/certificates/ITIL-4-Foundation.pdf",
         skillsCovered: [
           "ITIL Service Value System",
           "Incident Management",
